@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://developer.ohmconnect.com (observed OAuth2 redirect to AWS Cognito hosted UI)
+notes: >-
+  OhmConnect's developer portal (developer.ohmconnect.com) is gated entirely
+  behind AWS Cognito. Unauthenticated requests to any path (including
+  /openapi.json, /docs, /.well-known/*) 307-redirect to the Cognito hosted
+  login/authorize endpoint. The auth profile below is observed from that live
+  redirect; the OpenAPI/spec surface itself is not publicly accessible, so the
+  underlying API security schemes could not be harvested.
+summary:
+  types:
+  - oauth2
+  - openIdConnect
+  oauth2_flows:
+  - authorizationCode
+  pkce: S256
+schemes:
+- name: cognito
+  type: oauth2
+  provider: AWS Cognito
+  authorization_domain: auth-8d7ef420-2340-11ed-8fa1-0e5fb6478cd3.auth.us-east-1.amazoncognito.com
+  region: us-east-1
+  flows:
+  - flow: authorizationCode
+    pkce: S256
+    authorizationUrl: https://auth-8d7ef420-2340-11ed-8fa1-0e5fb6478cd3.auth.us-east-1.amazoncognito.com/oauth2/authorize
+    tokenUrl: https://auth-8d7ef420-2340-11ed-8fa1-0e5fb6478cd3.auth.us-east-1.amazoncognito.com/oauth2/token
+    scopes:
+    - profile
+    - openid
+    - aws.cognito.signin.user.admin
+  sources:
+  - https://developer.ohmconnect.com

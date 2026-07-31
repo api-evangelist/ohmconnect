@@ -1,7 +1,29 @@
 aid: ohmconnect
 name: Ohmconnect
-description: Ohmconnect is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  OhmConnect is a residential demand-response and virtual power plant company
+  that turns household electricity flexibility into grid capacity. It alerts
+  customers during "OhmHours" — windows when grid power is most expensive or
+  carbon-intensive — and pays them cash, gift cards, and prizes for reducing or
+  automating down their usage, then aggregates those reductions and sells them
+  into wholesale energy markets. It serves California utility customers (PG&E,
+  SCE, and SDG&E) and operates as a competitive retail electricity provider in
+  Texas through OhmConnect Energy. OhmConnect runs a login-gated developer
+  portal (developer.ohmconnect.com) secured with AWS Cognito OAuth2, but
+  publishes no public API specification.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/628decbd69d2a151a1bbecd2/634773439fd2754c60a4a97f_ohmconnect-save-energy-save-money-preview.jpg
 url: https://raw.githubusercontent.com/api-evangelist/ohmconnect/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +33,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Energy
+- Demand Response
+- Virtual Power Plant
+- Utilities
+- Smart Home
+- Sustainability
+- Electricity
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,4 +51,29 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://ohmconnect.com
+  url: https://www.ohmconnect.com
+- type: DeveloperPortal
+  url: https://developer.ohmconnect.com
+- type: Support
+  url: https://www.ohmconnect.com/help
+- type: SignUp
+  url: https://login.ohmconnect.com/signup
+- type: Login
+  url: https://app.ohmconnect.com/login
+- type: TermsOfService
+  url: https://www.ohmconnect.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.ohmconnect.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/ohmconnect
+- type: Authentication
+  url: authentication/ohmconnect-authentication.yml
+- type: DomainSecurity
+  url: security/ohmconnect-domain-security.yml
+- type: LLMsTxt
+  url: llms/ohmconnect-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
