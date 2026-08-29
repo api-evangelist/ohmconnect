@@ -36,6 +36,9 @@ accessModel:
   method: derived
 image: https://cdn.prod.website-files.com/628decbd69d2a151a1bbecd2/634773439fd2754c60a4a97f_ohmconnect-save-energy-save-money-preview.jpg
 url: https://raw.githubusercontent.com/api-evangelist/ohmconnect/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "OhmConnect runs a login-gated developer portal (developer.ohmconnect.com) secured with AWS Cognito OAuth2, but publishes no public API specification."
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
